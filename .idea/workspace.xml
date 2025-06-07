@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ce7b717-ccc3-4e3a-974f-5b2c486b7f6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/spring.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springcore/xml/ioc/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationcontext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
+    <list default="true" id="0ce7b717-ccc3-4e3a-974f-5b2c486b7f6f" name="Changes" comment="Bean creation with xml based configuration">
+      <change afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/springcore/annotation/bean/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/springcore/annotation/bean/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/springcore/xml/bean/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/springcore/xml/bean/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/libs/spring-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/applicationcontext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/springcoreproject.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springcore/annotation/bean/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springcore/annotation/bean/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/springcoreproject.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.lock" afterDir="false" />
@@ -18,16 +27,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.13/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/spring.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/springcoreproject.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/springcore/xml/ioc/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/springcore/xml/ioc/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/springcore/xml/ioc/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Employee.class.uniqueId1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springcore/xml/ioc/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springcore/xml/ioc/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springcore/xml/ioc/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springcore/xml/bean/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springcore/xml/ioc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springcore/xml/bean/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationcontext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationcontext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,19 +90,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "emexo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;emexo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/emexo/springcoreproject.git",
-    "accountId": "0669b65e-c8c8-4cde-abe6-f8f0ed0d3412"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/emexo/springcoreproject.git&quot;,
+    &quot;accountId&quot;: &quot;0669b65e-c8c8-4cde-abe6-f8f0ed0d3412&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -107,6 +120,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.springcoreproject [:com.springcore.annotation.bean.Main.main()].executor": "Run",
     "Gradle.springcoreproject [:com.springcore.xml.ioc.Employee.main()].executor": "Run",
     "Gradle.springcoreproject [:com.springcore.xml.ioc.Main.main()].executor": "Run",
     "Gradle.springcoreproject [build].executor": "Run",
@@ -119,13 +133,13 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.com.springcore.annotation.bean.Main">
     <configuration name="Employee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.springcore.xml.ioc.Employee" />
+      <option name="MAIN_CLASS_NAME" value="com.springcore.xml.bean.Employee" />
       <module name="spring.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.springcore.xml.ioc.*" />
+          <option name="PATTERN" value="com.springcore.xml.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +148,24 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.springcore.xml.ioc.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.springcore.xml.bean.Main" />
       <module name="spring.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.springcore.xml.ioc.*" />
+          <option name="PATTERN" value="com.springcore.xml.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.springcore.annotation.bean.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springcore.annotation.bean.Main" />
+      <module name="springcoreproject.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springcore.annotation.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,6 +219,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.springcore.annotation.bean.Main" />
         <item itemvalue="Gradle.springcoreproject [build]" />
         <item itemvalue="Gradle.springcoreproject [clean]" />
         <item itemvalue="Application.Main" />
@@ -207,6 +235,19 @@
       <option name="presentableId" value="Default" />
       <updated>1749276681915</updated>
     </task>
+    <task id="LOCAL-00001" summary="Bean creation with xml based configuration">
+      <option name="closed" value="true" />
+      <created>1749278970797</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749278970797</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bean creation with xml based configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bean creation with xml based configuration" />
   </component>
 </project>
