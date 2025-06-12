@@ -1,4 +1,4 @@
-package com.springcore.annotation.springdao;
+package com.springcore.springdao;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

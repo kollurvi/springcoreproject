@@ -1,4 +1,4 @@
-package com.springcore.annotation.springdao;
+package com.springcore.springdao;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.ApplicationContext;
