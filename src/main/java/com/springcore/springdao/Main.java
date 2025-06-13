@@ -8,8 +8,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @Log4j2
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.springcore.annotation.springdao");
-        JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
-        log.info(jdbcTemplate);
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.springcore.springdao");
+        UserDAO userDAO = context.getBean("userDAO", UserDAO.class);
+
+        User user = new User();
+        user.setUsername("Amit");
+        user.setPassword("amit");
+        user.setFullname("Amit Vishwa");
+        user.setEmail("amit@gmail.com");
+        userDAO.save(user);
     }
 }
