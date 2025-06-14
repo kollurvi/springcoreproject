@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Log4j2
 @Repository
 public class UserDAO {
@@ -19,4 +21,14 @@ public class UserDAO {
     }
 
     // update and delete are assignment
+
+    public List<User> findAll(){
+        String sql = "select * from users";
+      return  jdbcTemplate.query(sql, new UserRowMapper());
+    }
+
+    public User findById(int id){
+        String sql = "select * from users where id=?";
+        return jdbcTemplate.queryForObject(sql, new UserRowMapper(), id);
+    }
 }

@@ -5,6 +5,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.List;
+
 @Log4j2
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,12 @@ public class Main {
         user.setPassword("amit");
         user.setFullname("Amit Vishwa");
         user.setEmail("amit@gmail.com");
-        userDAO.save(user);
+      //  userDAO.save(user);
+
+       // List<User> list = userDAO.findAll();
+        //list.forEach(user1 -> log.info(user1));
+
+        User user1 = userDAO.findById(2);
+        log.info(user1);
     }
 }
