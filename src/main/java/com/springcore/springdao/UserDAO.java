@@ -4,6 +4,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ public class UserDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Transactional
     public void save(User user){
         String sql = "insert into users(username, password, fullname,email) values(?,?,?,?)";
         int response = jdbcTemplate.update(sql, user.getUsername(), user.getPassword(), user.getFullname(), user.getEmail());
