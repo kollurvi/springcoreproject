@@ -29,8 +29,10 @@ public class UserDAOImpl implements UserDAO {
       return  jdbcTemplate.query(sql, new UserRowMapper());
     }
 
-    public User findById(int id){
+    public User findById(int id) throws UserNotFoundException{
         String sql = "select * from users where id=?";
+        if(id<0)
+            throw  new UserNotFoundException("User details not found");
         return jdbcTemplate.queryForObject(sql, new UserRowMapper(), id);
     }
 }

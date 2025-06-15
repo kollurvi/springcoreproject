@@ -15,9 +15,14 @@ public class Main {
         user.setPassword("amit1");
         user.setFullname("Amit Vishwa");
         user.setEmail("amit@gmail.com");
-        userDAOImpl.save(user);
+        //userDAOImpl.save(user);
 
-        User user1 = userDAOImpl.findById(2);
+        User user1 = null;
+        try {
+            user1 = userDAOImpl.findById(2);
+        } catch (UserNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         log.info(user1);
     }
 }

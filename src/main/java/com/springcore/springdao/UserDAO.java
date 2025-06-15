@@ -5,5 +5,5 @@ import java.util.List;
 public interface UserDAO {
     void save(User user);
     List<User> findAll();
-    User findById(int id);
+    User findById(int id)throws UserNotFoundException;
 }
