@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NotificationManager {
     @Autowired
-    @Qualifier("emailNotificationMessage")
+    //@Qualifier("emailNotificationMessage")
     //@Qualifier("smsNotificationMessage")
     private NotificationMessage notificationMessage;
 
