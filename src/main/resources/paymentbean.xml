@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean name="cardPayment" class="com.springcore.xml.di.constructor.CreditCardPaymentService">
+        <constructor-arg index="0" value="2233 4444 2234"/>
+        <constructor-arg index="1" value="Vidyasagar"/>
+        <constructor-arg index="2" value="10/25"/>
+    </bean>
+
+    <bean name="upiPayment" class="com.springcore.xml.di.constructor.UpiCardPaymentService">
+        <constructor-arg index="0" value="8861485559"/>
+        <constructor-arg index="1" value="gpay"/>
+    </bean>
+
+    <bean name="paymentProcessor" class="com.springcore.xml.di.constructor.PaymentProcessor">
+        <constructor-arg index="0" ref="cardPayment"/>
+    </bean>
+</beans>
