@@ -10,8 +10,12 @@
     </bean>
 
     <bean name="wordDocument" class="com.springcore.xml.di.setter.WordDocument">
+        <!--
         <property name="documentName" value="MyFirstJavaSpring"/>
         <property name="documentType" value="DOC"/>
+        -->
+        <constructor-arg index="0" value="MyFirstJavaSpring"/>
+        <constructor-arg index="1" value="DOC"/>
     </bean>
 
     <bean name="documentProcessor" class="com.springcore.xml.di.setter.DocumentProcessor">

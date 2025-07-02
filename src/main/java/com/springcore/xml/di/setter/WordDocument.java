@@ -6,6 +6,7 @@ import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Setter
+@AllArgsConstructor
 public class WordDocument implements DocumentService {
     private String documentName;
     private String documentType;
