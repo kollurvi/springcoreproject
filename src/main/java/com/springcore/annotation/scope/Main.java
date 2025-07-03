@@ -8,11 +8,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.springcore.annotation.scope");
+        Customer customer1 = context.getBean("customer", Customer.class);
+        log.info(customer1.hashCode());
 
-        Account account1 = context.getBean("account", Account.class);
-        log.info("Account1:{}", account1.hashCode());
-
-        Account account2 = context.getBean("account", Account.class);
-        log.info("Account1:{}", account2.hashCode());
+        Customer customer2 = context.getBean("customer", Customer.class);
+        log.info(customer2.hashCode());
     }
 }
