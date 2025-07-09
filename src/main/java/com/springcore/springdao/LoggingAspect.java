@@ -4,40 +4,55 @@ import lombok.extern.log4j.Log4j2;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
 
 @Log4j2
-@EnableAspectJAutoProxy
+@Component
 @Aspect
-@Configuration
 public class LoggingAspect {
 
     //@Before("pointcut()")
-    public void  beforeAdvice(JoinPoint joinPoint){
+    public void beforeAdvice(JoinPoint joinPoint){
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
-        log.info("Before advice for the method name:{} and args:{}", methodName, args[0]);
+        log.info("**** Executing method: {} with arguments: {}", methodName, args);
     }
 
-    //@AfterReturning(pointcut = "pointcut()", returning = "object")
-    public void afterReturning(JoinPoint joinPoint, Object object){
-        log.info("After returning advice, method name:{} and response:{}", joinPoint.getSignature().getName(), object);
+    //@After("pointcut()")
+    public void afterAdvice(JoinPoint joinPoint){
+        String methodName = joinPoint.getSignature().getName();
+        log.info("#### Method {} executed successfully", methodName);
     }
 
-    @Pointcut("execution(* com.springcore.springdao.UserDAOImpl.*(..))")
-    public void pointcut(){}
+   // @AfterReturning(pointcut = "pointcut()", returning = "result")
+    public void afterReturningAdvice(JoinPoint joinPoint, Object result){
+        String methodName = joinPoint.getSignature().getName();
+        log.info("**** Method {} returned successfully with result: {}", methodName, result);
+    }
 
-    //@AfterThrowing(pointcut = "pointcut()", throwing = "exception")
-    public void afterThrowingAdvice(JoinPoint joinPoint, Exception exception){
-        log.info("After throwing advice, method name:{} and exception", joinPoint.getSignature().getName(), exception);
+   // @AfterThrowing(pointcut = "pointcut()", throwing = "exception")
+    public void afterThrowingAdvice(JoinPoint joinPoint, Throwable exception) {
+        String methodName = joinPoint.getSignature().getName();
+        log.error("**** Method {} threw an exception: {}", methodName, exception.getMessage());
     }
 
     @Around("pointcut()")
-    public void around(ProceedingJoinPoint joinPoint) throws Throwable {
-        Object[] args=joinPoint.getArgs();
-        log.info("Around advice , before execute the method name:{} and args:{}", joinPoint.getSignature().getName(), args[0]);
-        Object object = joinPoint.proceed();
-        log.info("Around advice after execute the method, method name:{} and response:{}", joinPoint.getSignature().getName(), object);
+    public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        String methodName = proceedingJoinPoint.getSignature().getName();
+        log.info("**** Around advice: Before executing method: {}", methodName);
+
+        Object result;
+        try {
+            result = proceedingJoinPoint.proceed();
+            log.info("**** Around advice: After executing method: {}", methodName);
+        } catch (Throwable throwable) {
+            log.error("**** Around advice: Exception in method {}: {}", methodName, throwable.getMessage());
+            throw throwable; // rethrow the exception
+        }
+
+        return result;
     }
+
+    @Pointcut("execution(* com.springcore.springdao.UserDAOImpl.getUserById(..))")
+    public void pointcut(){}
 }

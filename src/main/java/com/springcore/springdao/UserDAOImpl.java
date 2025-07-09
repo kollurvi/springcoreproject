@@ -1,6 +1,5 @@
 package com.springcore.springdao;
 
-import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -8,31 +7,31 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Log4j2
+@Transactional(readOnly = true)
 @Repository
-public class UserDAOImpl implements UserDAO {
+public class UserDAOImpl implements UserDAO{
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Transactional
-    public void save(User user){
-        String sql = "insert into users(username, password, fullname,email) values(?,?,?,?)";
-        int response = jdbcTemplate.update(sql, user.getUsername(), user.getPassword(), user.getFullname(), user.getEmail());
-        log.info("Response:{}", response);
+    @Override
+    public int insertUser(User user) {
+        String sql = "INSERT INTO users (username, password, fullname, email) VALUES (?, ?, ?, ?)";
+        return jdbcTemplate.update(sql, user.username(), user.password(), user.fullName(), user.email());
     }
 
-    // update and delete are assignment
-
-    public List<User> findAll(){
+    @Override
+    public List<User> getAllUsers() {
         String sql = "select * from users";
-      return  jdbcTemplate.query(sql, new UserRowMapper());
+        return jdbcTemplate.query(sql, new UserRowMapper());
     }
 
-    public User findById(int id) throws UserNotFoundException{
-        String sql = "select * from users where id=?";
-        if(id<0)
-            throw  new UserNotFoundException("User details not found");
+    @Override
+    public User getUserById(int id) throws IllegalArgumentException {
+        String sql = "select * from users where id = ?";
         return jdbcTemplate.queryForObject(sql, new UserRowMapper(), id);
     }
+
+
 }

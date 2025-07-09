@@ -3,7 +3,10 @@ package com.springcore.springdao;
 import java.util.List;
 
 public interface UserDAO {
-    void save(User user);
-    List<User> findAll();
-    User findById(int id)throws UserNotFoundException;
+
+    int insertUser(User user);
+
+    List<User> getAllUsers();
+
+    User getUserById(int id);
 }

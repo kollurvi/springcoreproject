@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-@PropertySource("application.properties")
+@PropertySource("classpath:application.properties")
 public class DBConnection {
     @Value("${db.url}")
     private String url;
@@ -19,8 +19,9 @@ public class DBConnection {
     @Value("${db.password}")
     private String password;
 
-    @Bean(name = "jdbcTemplate")
-    public JdbcTemplate getConnection(){
+
+    @Bean("jdbcTemplate")
+    public JdbcTemplate getJdbcTemplate() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(url);
         dataSource.setUsername(username);
@@ -28,7 +29,7 @@ public class DBConnection {
 
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource);
-
         return jdbcTemplate;
     }
+
 }
