@@ -16,7 +16,7 @@ public class Main {
         //int result = userDAO.insertUser(user);
         //log.info("User inserted successfully, rows affected: {}", result);
 
-        List<User> users = userDAO.getAllUsers();
+        //List<User> users = userDAO.getAllUsers();
        // log.info("Users retrieved successfully, total users: {}", users.size());
         //users.forEach(user1 -> log.info(user1));
 

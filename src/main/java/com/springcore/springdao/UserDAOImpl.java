@@ -28,7 +28,7 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public User getUserById(int id) {
+    public User getUserById(int id) throws IllegalArgumentException {
         String sql = "select * from users where id = ?";
         return jdbcTemplate.queryForObject(sql, new UserRowMapper(), id);
     }
