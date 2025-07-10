@@ -13,14 +13,14 @@ public class Main {
         UserDAO userDAO = context.getBean("userDAOImpl", UserDAO.class);
 
         User user = new User(1, "john_doe", "password123", "John Doe", "john@gmail.com");
-        //int result = userDAO.insertUser(user);
-        //log.info("User inserted successfully, rows affected: {}", result);
+        int result = userDAO.insertUser(user);
+        log.info("User inserted successfully, rows affected: {}", result);
 
         //List<User> users = userDAO.getAllUsers();
        // log.info("Users retrieved successfully, total users: {}", users.size());
         //users.forEach(user1 -> log.info(user1));
 
-        User retrievedUser = userDAO.getUserById(6);
-        log.info("User retrieved by ID: {}", retrievedUser);
+        //User retrievedUser = userDAO.getUserById(6);
+        //log.info("User retrieved by ID: {}", retrievedUser);
     }
 }

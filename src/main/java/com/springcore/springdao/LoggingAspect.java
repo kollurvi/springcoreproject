@@ -53,6 +53,6 @@ public class LoggingAspect {
         return result;
     }
 
-    @Pointcut("execution(* com.springcore.springdao.UserDAOImpl.getUserById(..))")
+    @Pointcut("execution(* com.springcore.springdao.UserDAOImpl.insertUser(..))")
     public void pointcut(){}
 }

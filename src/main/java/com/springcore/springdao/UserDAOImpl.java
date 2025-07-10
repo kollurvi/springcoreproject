@@ -1,5 +1,6 @@
 package com.springcore.springdao;
 
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,8 @@ public class UserDAOImpl implements UserDAO{
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @LogExecutionTime
+    @TrackAudit(doAction = "Insert User")
     @Transactional
     @Override
     public int insertUser(User user) {
