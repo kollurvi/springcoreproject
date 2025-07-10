@@ -30,5 +30,4 @@ public class Customer {
     public void setEmail(String email) {
         this.email = email;
     }
->>>>>>> 795a7a6729ed606eedad25119a3f94ec8e7d1890
 }
